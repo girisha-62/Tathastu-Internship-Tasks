@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class P&CDemo
+{
+    static long factorial(int num) {
+        int a = 1;
+        for (int i = 1; i <= num; i++) {
+            a *= i;
+        }
+        return a;
+    }
+    
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the first number ");
+        int b = in.nextInt();
+        System.out.print("Enter the second number ");
+        int f = in.nextInt();
+        int p = (int)(factorial(b) / factorial(b -f ));
+        int c = (int)(factorial(b) 
+                      / (factorial(b -f ) * factorial(f)));
+        System.out.println("Permutation = " + p);
+        System.out.println("Combination = " + c);
+    }
+}

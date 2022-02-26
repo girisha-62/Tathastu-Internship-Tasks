@@ -1,0 +1,29 @@
+public class TransposeDemo  
+{    
+    public static void main(String[] args) {    
+        int row, colmn;
+          int a[][] = {    
+                          {1, 7, 4},    
+                          {2, 5, 9},    
+                          {3, 6, 8}    
+                       };    
+          row = a.length;    
+        colmn = a[0].length;    
+            
+        int t[][] = new int[colmn][row];    
+            
+        for(int i = 0; i < colmn; i++){    
+            for(int j = 0; j < row; j++){    
+                t[i][j] = a[j][i];    
+            }    
+        }    
+        
+        System.out.println("Transpose of given matrix is ");    
+        for(int i = 0; i < colmn; i++){    
+            for(int j = 0; j < row; j++){    
+               System.out.print(t[i][j] + " ");    
+            }    
+            System.out.println();    
+        }    
+    }    
+}  
